@@ -81,12 +81,9 @@ GCP Census endpoints are accessible only for GAE Administrators, i.e. all endpoi
 Still, anyone may attempt to access your app and will be redirected to Google Account login page.
 
 That's why we strongly recommend enabling [GAE Firewall](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls) on your project.
-You can enable it with three simple gcloud commands:
-```
-gcloud app firewall-rules create 500 --action allow --source-range 0.1.0.1 --description "Allow GAE cron" --project YOUR-PROJECT-ID
-gcloud app firewall-rules create 510 --action allow --source-range 0.1.0.2 --description "Allow GAE tasks" --project YOUR-PROJECT-ID
-gcloud app firewall-rules update default --action deny --project YOUR-PROJECT-ID
-```
+You can enable it with three simple gcloud commands (see `secure.sh` for details):
+
+    make secure
 
 # Development
 

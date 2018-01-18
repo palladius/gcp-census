@@ -7,7 +7,10 @@ install-once: env.sh
 
 # will only call if file is not there yet ;)
 env.sh:
-	cp env.sh.dist env.sh 
+	cp env.sh.dist env.sh
 
 deploy: install-once
 	./deploy.sh
+
+secure: install-once
+	./secure.sh
