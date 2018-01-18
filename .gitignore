@@ -2,5 +2,7 @@
 *.pyc
 .idea
 lib
-
-*.bin
+*.binenv.sh
+# Created as part of installation process
+install-once
+env.sh
