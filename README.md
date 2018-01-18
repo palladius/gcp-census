@@ -64,12 +64,11 @@ GCP Census will retrieve metadata of tables it has read access to, which means t
 1. Specify metadata output BigQuery location in [app.yaml](app.yaml) (defaults to 'EU')
 1. Install dependencies (ideally using [virtualenv](https://virtualenv.pypa.io/en/stable/)):
     ```
-    pip install -r requirements.txt
-    pip install -t lib -r requirements.txt
+    make install-once
     ```
 1. Deploy to App Engine using [gcloud](https://cloud.google.com/sdk/) CLI tool:
     ```
-    gcloud app deploy --project YOUR-PROJECT-ID -v v1 app.yaml config/cron.yaml config/queue.yaml 
+    make deploy
     ```
 1. Grant [bigquery.dataViewer](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataViewer) role to YOUR-PROJECT-ID@appspot.gserviceaccount.com service account at GCP organisation, folder or selected projects level.
 1. Enable BigQuery in the project. BigQuery is automatically enabled in new projects. To activate it in a pre-existing project, enable the [BigQuery API](https://console.cloud.google.com/flows/enableapi?apiid=bigquery).
@@ -77,6 +76,10 @@ GCP Census will retrieve metadata of tables it has read access to, which means t
 1. Optionally you can manually trigger cron jobs in [the Cloud Console](https://console.cloud.google.com/appengine/taskqueues/cron?tab=CRON):
     * run `/createModels` to create BigQuery dataset and table
     * run `/bigQuery` to start collecting BigQuery metadata
+
+# Clone in CloudShell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open/git_repo=https://github.com/palladius/gcp-census/&working_dir=git%2Friccardo)
 
 # Security
 
