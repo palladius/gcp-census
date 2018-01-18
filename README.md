@@ -73,7 +73,7 @@ GCP Census will retrieve metadata of tables it has read access to, which means t
 
 You might also want to try it on CloudShell:
 
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https%3A%2F%2Fgithub.com%2Fpalladius%2Fgcp-census&page=shell&working_dir=git%2Friccardo)
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https%3A%2F%2Fgithub.com%2Fpalladius%2Fgcp-census&page=shell)
 
 # Security
 
