@@ -62,14 +62,8 @@ GCP Census will retrieve metadata of tables it has read access to, which means t
 1. Create GCP project and assign billing to it
 1. Clone GCP Census repository
 1. Specify metadata output BigQuery location in [app.yaml](app.yaml) (defaults to 'EU')
-1. Install dependencies (ideally using [virtualenv](https://virtualenv.pypa.io/en/stable/)):
-    ```
-    make install-once
-    ```
-1. Deploy to App Engine using [gcloud](https://cloud.google.com/sdk/) CLI tool:
-    ```
-    make deploy
-    ```
+1. Install dependencies (ideally using [virtualenv](https://virtualenv.pypa.io/en/stable/)): `make install-once`
+1. Deploy to App Engine using [gcloud](https://cloud.google.com/sdk/) CLI tool: `make deploy`
 1. Grant [bigquery.dataViewer](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataViewer) role to YOUR-PROJECT-ID@appspot.gserviceaccount.com service account at GCP organisation, folder or selected projects level.
 1. Enable BigQuery in the project. BigQuery is automatically enabled in new projects. To activate it in a pre-existing project, enable the [BigQuery API](https://console.cloud.google.com/flows/enableapi?apiid=bigquery).
 1. GCP Census job will be triggered daily by cron, see [cron.yaml](config/cron.yaml) for exact details
